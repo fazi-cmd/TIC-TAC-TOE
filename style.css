@@ -1,0 +1,139 @@
+:root {
+    --primary-color: #2c6e7c;
+    --secondary-color: #4a9ba8;
+    --accent-color: #ff6b6b;
+    --light-color: #ffffff;
+    --dark-color: #333333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    min-height: 100vh;
+    background-image: url('sticking-plaster.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: -8px;
+    color: var(--light-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.game-info {
+    margin-bottom: 20px;
+}
+
+.current-player {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--light-color);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.box {
+    aspect-ratio: 1/1;
+    background-color: var(--light-color);
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--dark-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.result {
+    margin: 20px 0;
+}
+
+.msg1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    min-height: 2rem;
+    color: var(--accent-color);
+}
+
+.reset {
+    padding: 12px 24px;
+    background-color: var(--accent-color);
+    color: var(--light-color);
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+.reset:hover {
+    background-color: #ff5252;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .current-player {
+        font-size: 1.2rem;
+    }
+    
+    .box {
+        font-size: 2.5rem;
+    }
+    
+    .msg1 {
+        font-size: 1.2rem;
+    }
+    
+    .reset {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
