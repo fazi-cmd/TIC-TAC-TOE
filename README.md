@@ -18,6 +18,5 @@ If the grid fills without a winner, it's a draw!
 
 📂 How to Run
 Download or clone the repo.
-
-Open index.html in your browser.
+(https://tictactoereal.netlify.app/)
 
